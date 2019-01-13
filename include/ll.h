@@ -99,7 +99,9 @@ int ll_remove_first(ll_t *list);
 // given a function that tests the values in the linked list, the first element that
 // satisfies that function is removed.
 // returns the new length of the linked list if successful, -1 otherwise
-int ll_remove_search(ll_t *list, int cond(void *));
+int ll_remove_search(ll_t *list, int cond(void *, void *), void *);
+
+int ll_search(ll_t *list, int cond(void *, void *), void *);
 
 // returns a pointer to the `n`th value in the linked list.
 // returns `NULL` if unsuccessful
